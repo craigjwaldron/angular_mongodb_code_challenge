@@ -35,7 +35,7 @@ $http({
 
 // List controller to view list
 myApp.controller('listController', [ '$scope', '$http', function ($scope, $http) {
-  $scope.allPets = [];
+  $scope.allHeroes = [];
 
   $scope.showHeroes = function(){
     console.log( 'in get Heroes' );
@@ -43,9 +43,12 @@ myApp.controller('listController', [ '$scope', '$http', function ($scope, $http)
   method: 'GET',
   url:'/getHeroes'
 }).then(function( response ){
-  $scope.allPets = response.data;
-  console.log($scope.response);
+  $scope.allHeroes = response.data;
+  console.log("GET RESPONSE: ", $scope.allHeroes);
     }); // End of then function
   }; // End of $scope.showAllPets
   $scope.showHeroes();
+
+
+
 }]); // End of list controller

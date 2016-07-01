@@ -13,6 +13,7 @@
   <body>
     <!-- Input div -->
     <div ng-controller="addHeroController">
+
       <form method="post">
         <input type="text" ng-model="aliasIn" name="name" value="" placeholder="Alias">
         <input type="text" ng-model="firstNameIn" name="name" value="" placeholder="First Name">
@@ -32,12 +33,22 @@
         <!-- End of select option -->
         <button ng-click="addHero()" value="submit">Submit Hero</button>
       </form> <!-- End of form -->
+
     </div>  <!-- End of input div -->
 
-    <div ng-controller="listController">
-        <p ng-repeat= "hero in heroes"> {{ hero.aliasIn }} </p>
-    </div>
+    <div style="list-style-type:none" ng-controller="listController">
+      <!-- list of heroes on DOM -->
+        <li ng-repeat= "hero in allHeroes">
+          <p><b>Alias: </b>{{ hero.alias }}</p>
+          <p><b>First Name: </b>{{ hero.first_name }}</p>
+          <p><b>Last Name: </b>{{ hero.last_name }}</p>
+          <p><b>City: </b>{{ hero.city }}</p>
+          <p><b>Power: </b>{{ hero.power_name }}</p>
+          <button type="button" name="button">Delete Hero</button>
+          <hr>
+        </li>
+
+    </div>     <!-- End of list div -->
 
   </body>
-
 </html>
