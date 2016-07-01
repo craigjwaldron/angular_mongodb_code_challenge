@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- Define Angular app -->
+<html ng-app="myApp">
+
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <!-- Sources -->
+    <script src="vendors/angular.min.js" charset="utf-8"></script>
+    <script src="scripts/script.js"></script>
+  </head>
+
+  <body>
+    <!-- Input div -->
+    <div ng-controller="addHeroController">
+      <form method="post">
+        <input type="text" ng-model="aliasIn" name="name" value="" placeholder="Alias">
+        <input type="text" ng-model="firstNameIn" name="name" value="" placeholder="First Name">
+        <input type="text" ng-model="lastNameIn" name="name" value="" placeholder="Last Name">
+        <input type="text" ng-model="cityIn" name="name" value="" placeholder="City">
+        <!-- Select power -->
+        <select ng-model="powerNameIn" class="" name="">
+          <option value="Invisibility">Invisibility</option>
+          <option value="Flight">Flight</option>
+          <option value="Super Speed">Super Speed</option>
+          <option value="Heat Vision">Heat Vision</option>
+          <option value="Super Strength">Super Strength</option>
+          <option value="Accelerated Healing">Accelerated Healing</option>
+          <option value="Power Blast">Power Blast</option>
+          <option value="Animal Affinity">Animal Affinity</option>
+        </select>
+        <!-- End of select option -->
+        <button ng-click="addHero()" value="submit">Submit Hero</button>
+      </form> <!-- End of form -->
+    </div>  <!-- End of input div -->
+
+    <div ng-controller="listController">
+        <p ng-repeat= "hero in heroes"> {{ hero.aliasIn }} </p>
+    </div>
+
+  </body>
+
+</html>
