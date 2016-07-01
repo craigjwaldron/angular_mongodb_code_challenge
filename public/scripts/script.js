@@ -49,6 +49,11 @@ myApp.controller('listController', [ '$scope', '$http', function ($scope, $http)
   }; // End of $scope.showAllPets
   $scope.showHeroes();
 
+// ---------
 
-
+// App. Delete
+$scope.remove = function(index){
+  console.log("button clicked");
+  $scope.allHeroes.splice(this.$index, 1);
+  };
 }]); // End of list controller
