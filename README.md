@@ -25,8 +25,5 @@ Power Blast
 Animal Affinity
 Use the power_name string field as the value in your option elements. This would store the string on the Hero object.
 
-This should show a list of heroes, displaying all the information from the entry captured in the view before. Each listing should have a button to delete the listing from the database.
 
-Your app will need a Node/Express server that can serve static files. It should make use of route modules and run on port 4242.
-
-If you follow the naming guidelines above for your Collection, there is no need to submit any information about your database.
+This should show a list of heroes, displaying all the information from the entry captured in the view before. Each listing should have a button to delete the listing from the database. Your app will need a Node/Express server that can serve static files. It should make use of route modules and run on port 4242. If you follow the naming guidelines above for your Collection, there is no need to submit any information about your database.
